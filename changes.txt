@@ -1,0 +1,12 @@
+Change-log
+- - - - - -
+NI = Not Implemented, but coded for
+
+Version 0.1.1.X (Initial Release):
+	*Released Potent "TicTacToe"
+
+To-do List
+- - - - - -
+
+	* Display player names on the graphics window
+	* Use FLTK GUI to control gameplay
