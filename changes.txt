@@ -2,8 +2,13 @@ Change-log
 - - - - - -
 NI = Not Implemented, but coded for
 
-Version 0.1.1.X (Initial Release):
+Version 0.1.1.X (Initial Release, Nov 14 2013):
 	*Released Potent "TicTacToe"
+
+Version 0.1.2.X (Dec 25 2013, "Christmas 2013 Update!"):
+	*Updated to draw a yellow line over the game-winning move after a game has ended
+	*Added a debugging mode
+	*Added 2 easter-eggs ;)
 
 To-do List
 - - - - - -

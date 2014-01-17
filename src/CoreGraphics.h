@@ -5,7 +5,7 @@
 //  C++ Header File
 //
 //  Created by Austin Jackson,
-//  Last modified on November 14, 2013.
+//  Last modified on December 25, 2013.
 //
 //  http://www.ruthlessphysics.com/potent/
 //
@@ -28,6 +28,7 @@ int boxDirectorX(int box);
 int boxDirectorY(int box);
 void drawBoxNames();
 void drawCompleteBoard();
+void drawWinningMove(int boxA,int boxB);
 void circleTest();
 void playDemo();
 
@@ -207,9 +208,23 @@ void drawCompleteBoard()
 	//if()
 }
 
-void showWin()
+void drawWinningMove(int boxA,int boxB)
 {
-    //
+    int A = 20;
+    int B = A;
+    int C = 0;
+    setcolor(YELLOW);
+    while(A > 0)
+    {
+        if(boxDirectorX(boxA) == boxDirectorX(boxB))
+        {
+            C = A;
+            B = C;
+        }
+        line((boxDirectorX(boxA)-(B/2))+C,(boxDirectorY(boxA)-(B/2))+A,(boxDirectorX(boxB)-(B/2))+C,(boxDirectorY(boxB)-(B/2))+A);
+        A--;
+    }
+    setcolor(WHITE);
 }
 
 void circleTest()

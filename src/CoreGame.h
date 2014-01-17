@@ -5,12 +5,13 @@
 //  C++ Header File
 //
 //  Created by Austin Jackson,
-//  Last modified on November 14, 2013.
+//  Last modified on December 25, 2013.
 //
 //  http://www.ruthlessphysics.com/potent/
 //
 
 #include "Player.h"
+#include "Intro.h"
 #include <iostream>
 #include <stdio.h>
 
@@ -26,8 +27,9 @@ string temp;
 bool isWindows = false;
 bool canContinue;
 bool gameDone = false;
-bool debugMode = false;
+int debugMode = 0;
 char pauseChar = '0';
+int winType;
 
 /*
 0 1 2
@@ -63,6 +65,12 @@ void pause()
         cout<<"[A problem happened while trying to pause();"<<endl;
     }
 }
+
+/*
+0 1 2
+3 4 5
+6 7 8
+*/
 
 bool checkForWinX()
 {
@@ -143,6 +151,87 @@ bool checkForWinO()
 	}
 }
 
+int checkForWinTypeX()
+{
+	if(game[0] == 1 && game[1] == 1 && game[2] == 1)
+	{
+		return 0;
+	}
+	else if(game[0] == 1 && game[4] == 1 && game[8] == 1)
+	{
+		return 1;
+	}
+	else if(game[0] == 1 && game[3] == 1 && game[6] == 1)
+	{
+		return 2;
+	}
+	else if(game[1] == 1 && game[4] == 1 && game[7] == 1)
+	{
+		return 3;
+	}
+	else if(game[2] == 1 && game[5] == 1 && game[8] == 1)
+	{
+		return 4;
+	}
+	else if(game[3] == 1 && game[4] == 1 && game[5] == 1)
+	{
+		return 5;
+	}
+	else if(game[6] == 1 && game[7] == 1 && game[8] == 1)
+	{
+		return 6;
+	}
+	else if(game[2] == 1 && game[4] == 1 && game[6] == 1)
+	{
+		return 7;
+	}
+	else
+	{
+		return -1;
+	}
+}
+
+int checkForWinTypeO()
+{
+	if(game[0] == 2 && game[1] == 2 && game[2] == 2)
+	{
+		return 0;
+	}
+	else if(game[0] == 2 && game[4] == 2 && game[8] == 2)
+	{
+		return 1;
+	}
+	else if(game[0] == 2 && game[3] == 2 && game[6] == 2)
+	{
+		return 2;
+	}
+	else if(game[1] == 2 && game[4] == 2 && game[7] == 2)
+	{
+		return 3;
+	}
+	else if(game[2] == 2 && game[5] == 2 && game[8] == 2)
+	{
+		return 4;
+	}
+	else if(game[3] == 2 && game[4] == 2 && game[5] == 2)
+	{
+		return 5;
+	}
+	else if(game[6] == 2 && game[7] == 2 && game[8] == 2)
+	{
+		return 6;
+	}
+	else if(game[2] == 2 && game[4] == 2 && game[6] == 2)
+	{
+		return 7;
+	}
+	else
+	{
+		return -1;
+	}
+}
+
+
 bool checkForTie()
 {
     if(game[0] != 0 && game[1] != 0 && game[2] != 0 && game[3] != 0 && game[4] != 0 && game[5] != 0 && game[6] != 0 && game[7] != 0 && game[8] != 0)
@@ -208,7 +297,18 @@ void gameSetup()
 	
 	if(player1.getName() == "debug" && player2.getName() == "this shit")
 	{
-        debugMode = true;
+        debugMode = 1;
+        system("COLOR 0A");
+    }
+    
+    if(player1.getName() == "omg" && player2.getName() == "a circle")
+	{
+        debugMode = 2;
+    }
+    
+    if(player1.getName() == "potent" && player2.getName() == "intro")
+	{
+        debugMode = 3;
     }
 	
 	cout<<"Player 1\'s name: "<<player1.getName()<<endl;

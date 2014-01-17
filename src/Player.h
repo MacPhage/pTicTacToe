@@ -5,7 +5,7 @@
 //  C++ Class Header File
 //
 //  Created by Austin Jackson,
-//  Last modified on November 14, 2013.
+//  Last modified on December 25, 2013.
 //
 //  http://www.ruthlessphysics.com/potent/
 //
