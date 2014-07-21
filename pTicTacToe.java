@@ -14,6 +14,7 @@ package com.ruthlessphysics.ptictactoe;
 import org.lwjgl.opengl.Display;
 
 import com.ruthlessphysics.util.Debug;
+import org.newdawn.slick.geom.Circle;
 import com.ruthlessphysics.util.draw.Manager;
 
 public class pTicTacToe
@@ -27,8 +28,11 @@ public class pTicTacToe
 		{
 			Manager.prep();
 			
-			//Graphics.drawCompleteBoard();
-			Graphics.drawBoard();
+			Visuals.drawCompleteBoard();
+			
+			Visuals.drawRawX(Game.windowX/2,Game.windowY/2);
+			Visuals.drawRawO(Game.windowX/2,Game.windowY/2);
+			
 			//Game.player1.doNextTurn();
 			//Game.player2.doNextTurn();
 			
