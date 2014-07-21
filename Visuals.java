@@ -65,6 +65,8 @@ public class Visuals
 	
 	public static void drawBoard()
 	{
+		//This used semi-deprecated com.ruthlessphysics.util.draw.Rectangles, which the only benefit is to easily adjust thickness
+		
 		//4 Horizontal lines
 		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.125),(int)(Game.windowX*0.75),t,true);
 		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.375),(int)(Game.windowX*0.75),t,true);
