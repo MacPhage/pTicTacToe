@@ -1,4 +1,0 @@
-Attributions
-- - - - - -
-	* WINBGIm C++ graphics library ("graphics.h")
-	——(http://winbgim.codecutter.org)
