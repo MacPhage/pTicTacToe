@@ -13,19 +13,24 @@ package com.ruthlessphysics.ptictactoe;
 
 import org.lwjgl.opengl.Display;
 
+import com.ruthlessphysics.util.Debug;
 import com.ruthlessphysics.util.draw.Manager;
 
 public class pTicTacToe
 {
 	public static void main(String args[])
 	{
-		new Manager(Game.windowX,Game.windowY,"pTicTacToe",true);
+		Debug.setTitle("pTicTacToe");
+		new Manager(Game.windowX,Game.windowY,Debug.title,true);
 		
 		while(!Display.isCloseRequested())
 		{
 			Manager.prep();
 			
-			Graphics.drawCompleteBoard();
+			//Graphics.drawCompleteBoard();
+			Graphics.drawBoard();
+			//Game.player1.doNextTurn();
+			//Game.player2.doNextTurn();
 			
 			Display.update();
 			Display.sync(60);
@@ -34,3 +39,5 @@ public class pTicTacToe
 		
 	}
 }
+
+

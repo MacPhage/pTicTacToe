@@ -11,6 +11,9 @@
 
 package com.ruthlessphysics.ptictactoe;
 
+import javax.swing.JOptionPane;
+
+import com.ruthlessphysics.util.Debug;
 import com.ruthlessphysics.util.stringmanipulation.Purify;
 
 public class Player
@@ -26,7 +29,7 @@ public class Player
 	{
 		name = Purify.alphanumeric(newName);
 	}
-	
+
 	public void setName(String newName)
 	{
 		name = newName;
@@ -51,6 +54,38 @@ public class Player
 	{
 		nextDraw = newDraw;
 	}
+
+
+	public void doNextTurn()
+	{
+		int box;
+		do
+		{
+			try
+			{
+				box = Integer.parseInt(JOptionPane.showInputDialog(getName()+", what box number should your next move be in?"));
+				if(box >= 0 && box <= 8 && Game.progress[box] == 0)
+				{
+					Game.progress[box] = 1;
+					//drawX(boxnumber);
+					Game.canContinue = true;
+				}
+				else
+				{
+					Debug.alert("\nThat was not a valid Box number, or the space was already taken.\nTry checking the graphic window.\n");
+					Game.canContinue = false;
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+				Debug.displayError(e);
+				JOptionPane.showMessageDialog(null, "That wasn\'t a proper number.", "pTicTacToe", JOptionPane.WARNING_MESSAGE);
+			}
+		}
+		while(Game.canContinue == false);
+
+	}
 }
 
 /* Original C++
@@ -65,7 +100,7 @@ class Player
 	string name;
 	int score;
 	int nextDraw;
-	
+
 	void setName(string newName)
 	{
 		name = newName;
@@ -93,4 +128,4 @@ class Player
 
 };
 
-*/
+ */

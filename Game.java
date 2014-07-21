@@ -18,9 +18,11 @@ public class Game
 	public static int windowX = 600;
 	public static int windowY = 600;
 	public static int[] progress = {0,0,0,0,0,0,0,0,0};
-	
 	public static Player player1 = new Player();
 	public static Player player2 = new Player();
+	public static int numberOfTurns = 0;
+	public static boolean canContinue = false;
+	
 	
 	void promptPlayers()
 	{
