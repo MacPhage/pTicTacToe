@@ -18,6 +18,8 @@ import com.ruthlessphysics.util.draw.SimpleText;
 public class Graphics
 {
 	
+	public static int t = 3; //Line thickness
+	
 	//TOP
 	static int posTopLeftX = (int)(Game.windowX*0.25);
 	static int posTopLeftY = (int)(Game.windowY*0.25);
@@ -56,12 +58,16 @@ public class Graphics
 	
 	public static void drawBoard()
 	{
-		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.125),(int)(Game.windowX*0.125)-(int)(Game.windowX*0.875),(int)(Game.windowY*0.125)-(int)(Game.windowY*0.875),true);
-		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.125),(int)(Game.windowX*0.125)-(int)(Game.windowX*0.375),(int)(Game.windowY*0.125)-(int)(Game.windowY*0.375),true);
-		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.125),(int)(Game.windowX*0.125)-(int)(Game.windowX*0.625),(int)(Game.windowY*0.125)-(int)(Game.windowY*0.625),true);
-		new Rectangle((int)(Game.windowX*0.375),(int)(Game.windowY*0.375),(int)(Game.windowX*0.375)-(int)(Game.windowX*0.625),(int)(Game.windowY*0.375)-(int)(Game.windowY*0.625),true);
-		new Rectangle((int)(Game.windowX*0.375),(int)(Game.windowY*0.375),(int)(Game.windowX*0.375)-(int)(Game.windowX*0.875),(int)(Game.windowY*0.375)-(int)(Game.windowY*0.875),true);
-		new Rectangle((int)(Game.windowX*0.625),(int)(Game.windowY*0.625),(int)(Game.windowX*0.625)-(int)(Game.windowX*0.875),(int)(Game.windowY*0.625)-(int)(Game.windowY*0.875),true);
+		//4 Horizontal lines
+		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.125),(int)(Game.windowX*0.875),t,true);
+		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.375),(int)(Game.windowX*0.875),t,true);
+		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.625),(int)(Game.windowX*0.875),t,true);
+		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.875),(int)(Game.windowX*0.875),t,true);
+		//4 Vertical Lines
+		new Rectangle((int)(Game.windowX*0.125),(int)(Game.windowY*0.0625),t,(int)(Game.windowY*0.875),true);
+		new Rectangle((int)(Game.windowX*0.375),(int)(Game.windowY*0.0625),t,(int)(Game.windowY*0.875),true);
+		new Rectangle((int)(Game.windowX*0.625),(int)(Game.windowY*0.0625),t,(int)(Game.windowY*0.875),true);
+		new Rectangle((int)(Game.windowX*0.875),(int)(Game.windowY*0.0625),t,(int)(Game.windowY*0.875),true);
 	}
 	
 	/*
