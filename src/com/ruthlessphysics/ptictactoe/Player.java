@@ -13,14 +13,17 @@ package com.ruthlessphysics.ptictactoe;
 
 import javax.swing.JOptionPane;
 
+import org.lwjgl.opengl.Display;
+
 import com.ruthlessphysics.util.Debug;
 import com.ruthlessphysics.util.stringmanipulation.Purify;
 
 public class Player
 {
-	public static String name;
-	public static int score;
-	public static int nextDraw;
+	public String name;
+	public int score;
+	public int nextDraw;
+	public int id;
 
 	public Player()
 	{
@@ -28,8 +31,8 @@ public class Player
 	public Player(String newName)
 	{
 		name = Purify.alphanumeric(newName);
+		
 	}
-
 	public void setName(String newName)
 	{
 		name = newName;
@@ -38,21 +41,13 @@ public class Player
 	{
 		return name;
 	}
-	public int getScore()
+	public void setID(int newID)
 	{
-		return score;
+		id = newID;
 	}
-	public void setScore(int newScore)
+	public int getID()
 	{
-		score = newScore;
-	}
-	public int getNextDraw()
-	{
-		return nextDraw;
-	}
-	public void setNextDraw(int newDraw)
-	{
-		nextDraw = newDraw;
+		return id;
 	}
 
 
@@ -64,10 +59,23 @@ public class Player
 			try
 			{
 				box = Integer.parseInt(JOptionPane.showInputDialog(getName()+", what box number should your next move be in?"));
+				if(box == -3)
+				{
+					Debug.alert("Intentionally quitting.");
+					Display.destroy();
+					System.exit(0);
+				}
 				if(box >= 0 && box <= 8 && Game.progress[box] == 0)
 				{
-					Game.progress[box] = 1;
-					//drawX(boxnumber);
+					Game.progress[box] = id;
+					if(id == 1)
+					{
+						Visuals.drawX(box);
+					}
+					else if(id == 2)
+					{
+						Visuals.drawO(box);
+					}
 					Game.canContinue = true;
 				}
 				else

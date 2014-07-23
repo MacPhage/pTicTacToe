@@ -14,32 +14,76 @@ package com.ruthlessphysics.ptictactoe;
 import org.lwjgl.opengl.Display;
 
 import com.ruthlessphysics.util.Debug;
-import org.newdawn.slick.geom.Circle;
 import com.ruthlessphysics.util.draw.Manager;
 
 public class pTicTacToe
 {
 	public static void main(String args[])
 	{
+		
 		Debug.setTitle("pTicTacToe");
+		
+		//Game.promptPlayers();
+		//Game.promptWindowSize();
+		
+		Game.setupPoints();
+		Game.setupDefaults();
+		
 		new Manager(Game.windowX,Game.windowY,Debug.title,true);
+		
+		Manager.prep();	
 		
 		while(!Display.isCloseRequested())
 		{
-			Manager.prep();
-			
-			Visuals.drawCompleteBoard();
-			
-			Visuals.drawRawX(Game.windowX/2,Game.windowY/2);
-			Visuals.drawRawO(Game.windowX/2,Game.windowY/2);
-			
-			//Game.player1.doNextTurn();
-			//Game.player2.doNextTurn();
-			
-			Display.update();
-			Display.sync(60);
+			Visuals.prepNextMove();
+			Game.player1.doNextTurn();
+			Visuals.prepNextMove();
+			if(Game.checkForWin())
+			{
+				if(Game.checkForWinX())
+				{
+					Game.winningMove();
+					Debug.alert("Player 1 won!","information");
+					break;
+				}
+				else if(Game.checkForWinO())
+				{
+					Game.winningMove();
+					Debug.alert("Player 2 won!","information");
+					break;
+				}
+			}
+			else if(Game.checkForTie())
+			{
+				Debug.alert("The game resulted in a tie!","information");
+				break;
+			}
+			Visuals.prepNextMove();
+			Game.player2.doNextTurn();
+			Visuals.prepNextMove();
+			if(Game.checkForWin())
+			{
+				if(Game.checkForWinX())
+				{
+					Game.winningMove();
+					Debug.alert("Player 1 won!","information");
+					break;
+				}
+				else if(Game.checkForWinO())
+				{
+					Game.winningMove();
+					Debug.alert("Player 2 won!","information");
+					break;
+				}
+			}
+			else if(Game.checkForTie())
+			{
+				Debug.alert("The game resulted in a tie!","information");
+				break;
+			}
 		}
 		Display.destroy();
+		System.exit(0);
 		
 	}
 }
