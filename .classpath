@@ -3,8 +3,33 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ruthlessphysics-util"/>
-	<classpathentry kind="lib" path="/Users/AustinJ/Documents/Workspace/HeadProject/lib/jar/lwjgl_util.jar"/>
-	<classpathentry kind="lib" path="/Users/AustinJ/Documents/Workspace/HeadProject/lib/jar/lwjgl.jar"/>
-	<classpathentry kind="lib" path="/Users/AustinJ/Documents/Workspace/HeadProject/lib/jar/slick.jar"/>
+	<classpathentry kind="lib" path="/Users/AustinJ/Documents/Workspace/HeadProject/lib/jar/lwjgl_util.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/AustinJ/Documents/Workspace/HeadProject/javadocs/lwjgl/javadoc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/AustinJ/Documents/Workspace/HeadProject/lib/jar/lwjgl.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/AustinJ/Documents/Workspace/HeadProject/javadocs/lwjgl/javadoc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/AustinJ/Documents/Workspace/HeadProject/lib/jar/slick.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Users/AustinJ/Documents/Workspace/HeadProject/javadocs/slick/javadoc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/HeadProject/lib/jar/AppleJavaExtensions.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/HeadProject/lib/jar/lwjgl-debug.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
