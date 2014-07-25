@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ruthlessphysics-util"/>
-	<classpathentry kind="lib" path="/HeadProject/lib/slick/lib/lwjgl_util.jar">
+	<classpathentry kind="lib" path="C:/Users/AustinJ/Dropbox/Workspace/HeadProject/lib/jar/lwjgl_util.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/lib/slick"/>
+			<attribute name="javadoc_location" value="file:/Users/AustinJ/Documents/Workspace/HeadProject/javadocs/lwjgl/javadoc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/HeadProject/lib/slick/lib/lwjgl.jar">
+	<classpathentry kind="lib" path="C:/Users/AustinJ/Dropbox/Workspace/HeadProject/lib/jar/lwjgl.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/lib/slick"/>
+			<attribute name="javadoc_location" value="file:/Users/AustinJ/Documents/Workspace/HeadProject/javadocs/lwjgl/javadoc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/HeadProject/lib/slick/lib/natives-linux.jar">
+	<classpathentry kind="lib" path="C:/Users/AustinJ/Dropbox/Workspace/HeadProject/lib/jar/slick.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/lib/slick"/>
+			<attribute name="javadoc_location" value="file:/Users/AustinJ/Documents/Workspace/HeadProject/javadocs/slick/javadoc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/HeadProject/lib/slick/lib/natives-mac.jar">
+	<classpathentry kind="lib" path="/HeadProject/lib/jar/AppleJavaExtensions.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/lib/slick"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/HeadProject/lib/slick/lib/natives-windows.jar">
+	<classpathentry kind="lib" path="/HeadProject/lib/jar/lwjgl-debug.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/lib/slick"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/HeadProject/lib/slick/lib/slick.jar">
-		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/lib/slick"/>
+			<attribute name="javadoc_location" value="file:/C:/Users/AustinJ/Dropbox/Workspace/HeadProject/javadocs/lwjgl/javadoc/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HeadProject/native"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>

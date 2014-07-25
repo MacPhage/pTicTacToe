@@ -59,7 +59,7 @@ public class Player
 			try
 			{
 				box = Integer.parseInt(JOptionPane.showInputDialog(getName()+", what box number should your next move be in?"));
-				if(box == -1)
+				if(box == -3)
 				{
 					Debug.alert("Intentionally quitting.");
 					Display.destroy();
