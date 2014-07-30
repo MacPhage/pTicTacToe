@@ -14,14 +14,15 @@ package com.ruthlessphysics.ptictactoe;
 import org.lwjgl.opengl.Display;
 
 import com.ruthlessphysics.util.Debug;
+import com.ruthlessphysics.util.Config;
 import com.ruthlessphysics.util.draw.Manager;
 
 public class pTicTacToe
 {
+	public static Config debugger = new Config("pTicTacToe");
+	
 	public static void main(String args[])
 	{
-		
-		Debug.setTitle("pTicTacToe");
 		
 		//Game.promptPlayers();
 		//Game.promptWindowSize();
@@ -29,7 +30,7 @@ public class pTicTacToe
 		Game.setupPoints();
 		Game.setupDefaults();
 		
-		new Manager(Game.windowX,Game.windowY,Debug.title,true);
+		new Manager(Game.windowX,Game.windowY,debugger.title,true);
 		
 		Manager.prep();	
 		

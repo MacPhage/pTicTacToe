@@ -17,7 +17,6 @@ import org.lwjgl.opengl.Display;
 import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Line;
 
-import com.ruthlessphysics.util.Debug;
 import com.ruthlessphysics.util.ExtraMath;
 import com.ruthlessphysics.util.draw.Manager;
 import com.ruthlessphysics.util.draw.Rectangle;
