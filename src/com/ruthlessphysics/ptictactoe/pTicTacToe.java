@@ -21,7 +21,7 @@ public class pTicTacToe
 	public static void main(String args[])
 	{
 		
-		Debug.setTitle("pTicTacToe");
+		String title = "pTicTacToe";
 		
 		//Game.promptPlayers();
 		//Game.promptWindowSize();
@@ -29,7 +29,7 @@ public class pTicTacToe
 		Game.setupPoints();
 		Game.setupDefaults();
 		
-		new Manager(Game.windowX,Game.windowY,Debug.title,true);
+		new Manager(Game.windowX,Game.windowY,title,true);
 		
 		Manager.prep();	
 		
