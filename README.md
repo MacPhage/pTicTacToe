@@ -8,7 +8,7 @@ that allows two users to play a game of 3-by-3 TicTacToe against each other.
 
 Here's a screenshot of the old C++ version
 
-![](http://ruthlessphysics.com/img/ptictactoe.png)
+![](http://macphage.github.io/img/ptictactoe.png)
 
 [Deprecated: C++ WinBGIm v0.1.1.134](http://ruthlessphysics.com/dl/deprecated/pTicTacToe_0.1.1.134.zip)
 
